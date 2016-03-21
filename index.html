@@ -4,6 +4,12 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
       $(document).ready(function(){
+        $("img").click(function(){
+          $("img").removeClass('clicked');
+          $(this).addClass('clicked');
+          var src = $(this).attr('src');
+          $("p").css("background-image", 'url(' + src + ')');
+        });
               
       });
     </script>
@@ -16,34 +22,52 @@
         margin-top: 5%;
         text-align: center;
       }
+      h4{
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
 
       img{
         height: 60px;
         width: 60px;
-        display: inline;
+        display: block;
         margin: 20px;
-        -webkit-transition: height 1s, width 1s;
+        -webkit-transition: height .2s, width .2s;
       }
 
       img:hover{
-        border: solid blue 1px;
+        box-shadow: 2px 2px 2px black;
+        height: 65px;
+        width: 65px;
       }
 
-      .selected{
-        height: 300px;
-        width: 300px;
+      .clicked{
+        border: solid 2px black;
       }
 
       div{
         display: block;
-        margin: auto;
+        margin-left: 25%;
         width: auto;
+        float: left;
+      }
+
+      p{
+        border: solid blue 1px;
+        float: right;
+        margin-right: 20%;
+        height: 470px;
+        width: 520px;
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
     </style>
   </head>
   <body>
-    <h1>We got us some FRUITS!</h1>
+    <h1>IT'S FRUIT TIME PALS</h1>
+    <h4>Click a fruit!</h4>
     <div>
       <img src="apple.jpg" alt="Apple!">
       <img src="orange.jpg" alt="Orange!">
@@ -52,5 +76,6 @@
       <img src="pear.jpg" alt="Pear!">
       <img src="strawberry.jpg" alt="Strawberry!">
     </div>
+    <p></p>
   </body>
 </html>
