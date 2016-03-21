@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Photo Gallery</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+      $(document).ready(function(){
+              
+      });
+    </script>
+    <style>
+      
+      h1{
+        /*width: 600px;*/
+        display: block;
+        margin: auto;
+        margin-top: 5%;
+        text-align: center;
+      }
+
+      img{
+        height: 60px;
+        width: 60px;
+        display: inline;
+        margin: 20px;
+        -webkit-transition: height 1s, width 1s;
+      }
+
+      img:hover{
+        border: solid blue 1px;
+      }
+
+      .selected{
+        height: 300px;
+        width: 300px;
+      }
+
+      div{
+        display: block;
+        margin: auto;
+        width: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>We got us some FRUITS!</h1>
+    <div>
+      <img src="apple.jpg" alt="Apple!">
+      <img src="orange.jpg" alt="Orange!">
+      <img src="banana.jpg" alt="Banana!">
+      <img src="blueberry.jpg" alt="Blueberry!">
+      <img src="pear.jpg" alt="Pear!">
+      <img src="strawberry.jpg" alt="Strawberry!">
+    </div>
+  </body>
+</html>
